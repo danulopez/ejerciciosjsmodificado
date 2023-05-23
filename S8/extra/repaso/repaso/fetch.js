@@ -14,7 +14,16 @@ const getCharacters = () => {
 
 getCharacters()
 
-
+const pintar = (characters) => { 
+    console.log("Estoy en mi funcion pintar",characters) 
+    const div$$ = document.createElement("div"); 
+    for (const character of characters) 
+    { const div2$$ = document.createElement("div"); 
+    div2$$.innerHTML = ` 
+    <h4>${character.name}</h4>
+     <img src="${character.image}"/> `; 
+     div$$.appendChild(div2$$); } 
+    document.body.appendChild(div$$); } 
 
 const getCharactersAsync = async() => {
     // ESPERAMOS A QUE SE RESUELVA LA PROMESA Y LA GUARDAMOS EN UNA VARIABLE
@@ -34,3 +43,7 @@ const getCharacters2 = async() => {
 }
 
 getCharacters2()
+
+
+
+  
