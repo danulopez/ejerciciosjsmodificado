@@ -17,4 +17,4 @@ const filteredLoleros = streamers.filter(streamer => {
 //     return streamer.gameMorePlayed.toLowerCase().includes('legends');
 // })
 
-console.log(filteredLoleros);
+console.log(filteredLoleros); 
