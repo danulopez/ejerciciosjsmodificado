@@ -21,13 +21,7 @@ const printCharacters = (characters) => {
 
     document.body.appendChild(div$$); } 
 
- const getCharactersAsync = async() => {
-    const primeraRespuesta = await fetch('https://starwars-server.vercel.app/characters') 
-    const segundaRespuesta = await primeraRespuesta.json()
-    console.log(segundaRespuesta)
-    return segundaRespuesta.data.characters
-    }
+ 
     
-getCharactersAsync()
 
     
