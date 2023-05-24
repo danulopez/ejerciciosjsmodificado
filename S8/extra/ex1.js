@@ -1,16 +1,17 @@
-const getCharacters = () => {
-fetch('https://starwars-server.vercel.app/characters')
-.then(res => res.json())
-.then(characters1 => {
-    console.log("estos son los caracteres",characters1.data.characters)
-        return characters1.data.characters
-})
+function init () {
+    getCharacters()
 }
 
-getCharacters()
+
+async function getCharacters () {
+const response = await fetch('https://starwars-server.vercel.app/characters')
+const caracteres = await response.json();
+console.log(caracteres.data.characters)
+ getCharacters(caracteres.data.characters)
+}
 
 const printCharacters = (characters) => {
-    console.log('pinto mis caracteres', characters);
+    
     const div$$ = document.createElement('div')
     for (const character of characters) {
         const div2$$ = document.createElement("div"); 
@@ -19,7 +20,10 @@ const printCharacters = (characters) => {
 
      div$$.appendChild(div2$$); } 
 
-    document.body.appendChild(div$$); } 
+    document.body.appendChild(div$$); 
+} 
+init ()
+
 
  
     
