@@ -9,10 +9,10 @@ function init() {
 }
 
 async function getAMovie (){
-    const response = await fetch('http://localhost:3000/movies')
-    const movies = await response.json();
-    console.log(movies);
-    printMovies(movies);
+    const response = await fetch ('http://localhost:3000/movies');
+    const resMovies = await response.json();
+    console.log(resMovies);
+    printMovies(resMovies);
    
 }
 
@@ -25,7 +25,7 @@ function printMovies (movies) {
         <p>${movie.description}</p>
         <p>${movie.date}</p>
         <p>${movie.rating}</p>
-        <img src="http://localhost:3000/${movie.img}"/>
+        <img width="300px" src="http://localhost:3000/${movie.img}"/>
          `    
                 
     document.body.appendChild(container$$)

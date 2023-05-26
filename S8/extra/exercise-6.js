@@ -27,7 +27,7 @@ function printCharacters(characters) {
             <h2>${character.name}</h2>
         `
 
-        div$$.addEventListener("click", () => { selectPlayer(character) })
+        div$$.addEventListener("click", () => {selectPlayer(character) })
         characters$$.appendChild(div$$)
     }
 }
